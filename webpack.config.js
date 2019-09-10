@@ -1,7 +1,7 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 const fs = require('fs-extra');
-let opt_dist = 'stage';
+let opt_dist = 'lib';
 let opt_watch = false;
 module.exports = (env) => {
 	if (process.env.opt == 'dev') {
@@ -13,7 +13,8 @@ module.exports = (env) => {
 		watch: opt_watch,
 		entry: {
 			index: './src/index.ts',
-			test: './test/test.ts'
+			test: './test/test.ts',
+			testUart: './test/testUart.ts'
 		},
 		output: {
 			path: path.resolve(__dirname, opt_dist),
