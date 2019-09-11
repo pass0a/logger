@@ -10,5 +10,4 @@ update.bat
 node_modules
 tmp
 package-lock.json
-rollup.config.js
-rollup.dev.js
+webpack.config.js
